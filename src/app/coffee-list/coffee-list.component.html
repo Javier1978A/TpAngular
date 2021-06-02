@@ -1,0 +1,33 @@
+<table class="tabla text-center">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Nombre</th>
+            <th>Tipo de Cafe</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Compra</th>
+
+        </tr>
+    </thead>
+    <tbody class="encabezado">
+        <tr *ngFor='let coffees of coffeess' [ngClass]="{'oferta ' : coffees.oferta}">
+            <td><img [src]="coffees.image" [alt]="coffees.nombre"></td>
+            <td> {{coffees.nombre}}</td>
+            <td>{{coffees.TipoDeCafe}}</td>
+            <td>{{coffees.precio | currency}}</td>
+            <td>
+                <span class="alert alert-warning p-0" *ngIf='coffees.stock == 0'>Sin Stock</span>
+            </td>
+            <td class="d-flex align-items-center">
+
+                <app-input-number [(cantidad)]='coffees.cantidad' [max]='coffees.stock' *ngIf='coffees.stock'>
+                </app-input-number>
+
+            </td>
+
+
+        </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+.tabla{
+    background-color: #e2d1d1;
+   
+}
+.encabezado, tr, td{
+    border: 2px solid black;
+    vertical-align: middle;
+    height:75px;
+}
+
+td.quantity-coffee{
+    display: flex;
+}
+
+
+
+img {
+height: 50px;
+width: 50px;
+
+}
+
+.oferta {
+    border: 2px solid green;
+    background: #A6C8BE;
+}
