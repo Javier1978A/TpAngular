@@ -1,4 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
+import { CoffeeCartService } from '../coffee-cart.service';
 import { Coffee } from './Coffee';
 
 @Component({
@@ -7,6 +8,8 @@ import { Coffee } from './Coffee';
   styleUrls: ['./coffee-list.component.scss']
 })
 export class CoffeeListComponent implements OnInit {
+
+
   coffeess: Coffee[] = [
     {
       id: 1,
@@ -50,10 +53,16 @@ export class CoffeeListComponent implements OnInit {
     }
 
   ]
-  constructor() { }
+
+
+  constructor(private coffee: CoffeeCartService) { }
 
   ngOnInit(): void {
   }
-
+  addToCart(coffee: any): void {
+    this.coffee.addToCart(coffee)
+    coffee.stock -= coffee.cantidad;
+    coffee.cantidad = 0;
+  }
 
 }

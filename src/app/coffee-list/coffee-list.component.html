@@ -23,6 +23,7 @@
 
                 <app-input-number [(cantidad)]='coffees.cantidad' [max]='coffees.stock' *ngIf='coffees.stock'>
                 </app-input-number>
+                <button class="btn btn-warning btn-sm ml-2" (click)="addToCart(coffees)">Comprar</button>
 
             </td>
 

@@ -1,9 +1,9 @@
 .tabla{
-    background-color: #e2d1d1;
+    background-color: #aaa0a0;
    
 }
 .encabezado, tr, td{
-    border: 2px solid black;
+    border: 2px solid rgb(197, 197, 197);
     vertical-align: middle;
     height:75px;
 }
@@ -12,12 +12,9 @@ td.quantity-coffee{
     display: flex;
 }
 
-
-
 img {
 height: 50px;
 width: 50px;
-
 }
 
 .oferta {
